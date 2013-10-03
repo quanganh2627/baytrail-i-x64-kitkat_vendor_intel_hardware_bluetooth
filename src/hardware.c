@@ -387,8 +387,12 @@ static uint8_t hw_config_findpatch(char *p_chip_id_str)
 unsigned char char_to_hex(char c)
 {
     volatile uint8_t x;
-    char* end;
-    x = strtol(&c, &end, 16);
+    char str[2];
+    str[0] = c;
+    str[1] = '\0';
+    x = strtol(str, NULL, 16);
+
+
     return x;
 }
 
