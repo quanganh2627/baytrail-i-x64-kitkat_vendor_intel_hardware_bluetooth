@@ -1,5 +1,7 @@
 /******************************************************************************
  *
+ *  Copyright (C) 2013-2014 Intel Mobile Communications GmbH
+ *
  *  Copyright (C) 2009-2012 Broadcom Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,11 +20,11 @@
 
 /******************************************************************************
  *
- *  Filename:      bt_vendor_brcm.h
+ *  Filename:      bt_vendor.h
  *
  *  Description:   A wrapper header file of bt_vendor_lib.h
  *
- *                 Contains definitions specific for interfacing with Broadcom
+ *                 Contains definitions specific for interfacing with Intel
  *                 Bluetooth chipsets
  *
  ******************************************************************************/
@@ -121,7 +123,7 @@
 #define LPM_SLEEP_MODE                  1
 #endif
 
-/* Host Stack Idle Threshold in 300ms or 25ms 
+/* Host Stack Idle Threshold in 300ms or 25ms
 
   In sleep mode 1, this is the number of firmware loops executed with no
     activity before the Host wake line is deasserted. Activity includes HCI

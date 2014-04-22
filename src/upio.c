@@ -1,5 +1,7 @@
 /******************************************************************************
  *
+ *  Copyright (C) 2013-2014 Intel Mobile Communications GmbH
+ *
  *  Copyright (C) 2009-2012 Broadcom Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,7 +34,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <cutils/properties.h>
-#include "bt_vendor_brcm.h"
+#include "bt_vendor.h"
 #include "upio.h"
 #include "userial_vendor.h"
 
