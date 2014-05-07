@@ -1,7 +1,5 @@
 /******************************************************************************
  *
- *  Copyright (C) 2013-2014 Intel Mobile Communications GmbH
- *
  *  Copyright (C) 2009-2012 Broadcom Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,16 +18,16 @@
 
 /******************************************************************************
  *
- *  Filename:      bt_vendor.c
+ *  Filename:      bt_vendor_brcm.c
  *
- *  Description:   Intel vendor specific library implementation
+ *  Description:   Broadcom vendor specific library implementation
  *
  ******************************************************************************/
 
 #define LOG_TAG "bt_vendor"
 
 #include <utils/Log.h>
-#include "bt_vendor.h"
+#include "bt_vendor_brcm.h"
 #include "upio.h"
 #include "userial_vendor.h"
 

@@ -1,7 +1,5 @@
 /******************************************************************************
  *
- *  Copyright (C) 2013-2014 Intel Mobile Communications GmbH
- *
  *  Copyright (C) 2009-2012 Broadcom Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,7 +29,7 @@
 
 #include <utils/Log.h>
 #include <string.h>
-#include "bt_vendor.h"
+#include "bt_vendor_brcm.h"
 
 /******************************************************************************
 **  Externs

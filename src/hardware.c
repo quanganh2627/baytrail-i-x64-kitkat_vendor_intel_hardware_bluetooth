@@ -1,7 +1,5 @@
 /******************************************************************************
  *
- *  Copyright (C) 2013-2014 Intel Mobile Communications GmbH
- *
  *  Copyright (C) 2009-2012 Broadcom Corporation
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -42,7 +40,7 @@
 #include <cutils/properties.h>
 #include <stdlib.h>
 #include "bt_hci_bdroid.h"
-#include "bt_vendor.h"
+#include "bt_vendor_brcm.h"
 #include "userial.h"
 #include "userial_vendor.h"
 #include "upio.h"
