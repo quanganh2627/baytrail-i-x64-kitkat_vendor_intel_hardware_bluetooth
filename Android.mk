@@ -30,4 +30,6 @@ include $(LOCAL_PATH)/vnd_buildcfg.mk
 
 include $(BUILD_SHARED_LIBRARY)
 
+include $(LOCAL_PATH)/cert/bt_cert.mk
+
 endif # BOARD_HAVE_BLUETOOTH_IBT
