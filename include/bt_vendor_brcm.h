@@ -77,7 +77,7 @@
  * command.
  */
 #ifndef SW_RFKILL_CMD_SUPPORTED
-#define SW_RFKILL_CMD_SUPPORTED   TRUE
+#define SW_RFKILL_CMD_SUPPORTED   FALSE
 #endif
 
 /* The millisecond delay pauses on HCI transport after firmware patches
