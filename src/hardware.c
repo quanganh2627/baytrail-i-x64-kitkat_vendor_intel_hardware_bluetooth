@@ -540,7 +540,16 @@ void hw_config_cback(void *p_mem)
             }
             else
             {
-                //Patch file not found
+                //Patch file not found, report fw download success
+                ALOGD("Firmware is already updated");
+                if (bt_vendor_cbacks)
+                {
+                    if (p_buf != NULL)
+                        bt_vendor_cbacks->dealloc(p_buf);
+
+                    bt_vendor_cbacks->fwcfg_cb(BT_VND_OP_RESULT_SUCCESS);
+                }
+                is_proceeding = TRUE;
                 break;
             }
 
@@ -657,15 +666,27 @@ void hw_config_cback(void *p_mem)
                     evt_buf[12], evt_buf[13], evt_buf[14]);
             }
 
-            //Report the fw download success
-            bt_vendor_cbacks->fwcfg_cb(BT_VND_OP_RESULT_SUCCESS);
+            //Report fw download success
+            if (bt_vendor_cbacks)
+            {
+                if (p_buf != NULL)
+                    bt_vendor_cbacks->dealloc(p_buf);
+
+                bt_vendor_cbacks->fwcfg_cb(BT_VND_OP_RESULT_SUCCESS);
+            }
             is_proceeding = TRUE;
             break;
 
         case HW_CFG_FAIL:
             ALOGE("vendor lib fw conf aborted");
-            //Report the fw download failure
-            bt_vendor_cbacks->fwcfg_cb(BT_VND_OP_RESULT_FAIL);
+            //Report fw download failure
+            if (bt_vendor_cbacks)
+            {
+                if (p_buf != NULL)
+                    bt_vendor_cbacks->dealloc(p_buf);
+
+                bt_vendor_cbacks->fwcfg_cb(BT_VND_OP_RESULT_FAIL);
+            }
             is_proceeding = TRUE;
             break;
 
